@@ -1,13 +1,21 @@
 package com.trademap.clone_trademap.job;
 
+import com.trademap.clone_trademap.modelo.AcaoFavorita;
+import com.trademap.clone_trademap.service.impl.AcaoB3Service;
+import com.trademap.clone_trademap.service.impl.AcaoFavoritaService;
+import com.trademap.clone_trademap.utils.LogUtil;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class AcaoThreadJob implements DisposableBean, Runnable {
-
-
+    @Autowired
+    private AcaoFavoritaService acaoFavoritaService;
+   @Autowired
+    private AcaoB3Service acaoB3Service;
     private Thread thread;
     private boolean someCondition;
 

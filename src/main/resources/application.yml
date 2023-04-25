@@ -3,3 +3,6 @@ kafka:
   brokers: ec2-13-59-22-86.us-east-2.compute.amazonaws.com:9092
   topico-acao-b3: acao.b3.dados
 # API Externa
+api:
+  b3:
+    url-base: http://ec2-13-59-22-86.us-east-2.compute.amazonaws.com:5000
